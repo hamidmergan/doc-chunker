@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "doc-chunker"
+version = "0.1.0"
+description = "Split PDF, DOCX, PPTX, TXT and Markdown into clean text chunks for RAG"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Hamid Mergan" }]
+keywords = ["rag", "chunking", "text-splitting", "pdf", "docx", "pptx", "markdown", "llm"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Text Processing",
+    "Typing :: Typed",
+]
+dependencies = [
+    "pdfminer.six>=20221105",
+    "python-docx>=1.0",
+    "python-pptx>=0.6.23",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+dev = ["pytest>=7", "build", "twine"]
+
+[project.scripts]
+doc-chunker = "doc_chunker.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+doc_chunker = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

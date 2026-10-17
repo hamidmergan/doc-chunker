@@ -20,7 +20,7 @@ Everything runs on your machine. Your documents never leave it.
 ## Installation
 
 ```bash
-pip install doc-chunker
+pip install document-chunker
 ```
 
 Alternatively, you can install it from the source:

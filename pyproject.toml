@@ -35,6 +35,12 @@ dependencies = [
 test = ["pytest>=7"]
 dev = ["pytest>=7", "build", "twine"]
 
+[project.urls]
+Homepage = "https://github.com/hamidmergan/doc-chunker"
+Source = "https://github.com/hamidmergan/doc-chunker"
+Issues = "https://github.com/hamidmergan/doc-chunker/issues"
+Changelog = "https://github.com/hamidmergan/doc-chunker/blob/main/CHANGELOG.md"
+
 [project.scripts]
 doc-chunker = "doc_chunker.cli:main"
 

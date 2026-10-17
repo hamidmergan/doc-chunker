@@ -26,6 +26,8 @@ pip install document-chunker
 Alternatively, you can install it from the source:
 
 ```bash
+git clone https://github.com/hamidmergan/doc-chunker.git
+cd doc-chunker
 pip install .
 ```
 
